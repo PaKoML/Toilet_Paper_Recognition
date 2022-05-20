@@ -6,6 +6,6 @@ So, we developers decided to make a fully automatic program based on convolution
 
 
 ## Developers
-* [Kim Minjun](https://github.com/kmj0825)
-* [Park Hanbin](https://github.com/kimchyoungman)
-* [Hong Jihwan](https://github.com/Jordano-Jackson)
+* [Minjun Kim](https://github.com/kmj0825)
+* [Hanbin Park](https://github.com/kimchyoungman)
+* [Jihwan Hong](https://github.com/Jordano-Jackson)
