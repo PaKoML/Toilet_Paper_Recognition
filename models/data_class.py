@@ -66,9 +66,12 @@ class Data:
         self.bbox[idx] = [left, top, right, bottom]
         return self.bbox[idx];
     
-    def resize_image(self, idx, x_size, y_size, option = 0) :
-        self.img[idx] = self.img[idx].resize((x_size, y_size), 0);
+    def resize_image(self, idx, size_to, option = 0) :
+        self.img[idx] = self.img[idx].resize(size_to, 0);
         return self.img[idx];
         
+    def get_len(self) :
+        return len(self.labels);
+    
     def test(self):
         pass;
