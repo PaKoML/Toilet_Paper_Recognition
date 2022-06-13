@@ -11,10 +11,10 @@ class LBData:
     def __init__(self):
         
         # setting field
-        end_time = "2022-05-24"
+        end_time = "2022-06-09"
         #####
         
-        print("initializing...")
+        print("Initializing...")
         
         # load project data
         LB_API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJjbDM3M2ExYjdtb214MDg4eGN0dHM4eGFiIiwib3JnYW5pemF0aW9uSWQiOiJjbDM3M2ExYXZtb213MDg4eGZjb2EwYW05IiwiYXBpS2V5SWQiOiJjbDNjYWd2dnAxZmJ1MDc4dmFtcTdiOTV1Iiwic2VjcmV0IjoiNWMyMGM3ZmQxYWVkYTQ1NDBlNmMxODJiZjE5YzVhZWMiLCJpYXQiOjE2NTI5MjA5NzEsImV4cCI6MjI4NDA3Mjk3MX0.Z3EZFFbUvRLzSAWfL_VnOqZvU4ozVX3wm2M2rC5MofQ"
@@ -24,9 +24,9 @@ class LBData:
         self.labels = project.export_labels(download = True, start="2022-05-13", end=end_time)
         
         self.img = [];
-        print("loading images...");
+        print("Loading images...");
         self.load_image();
-        print("loading images done !")
+        print("Loading images done !")
         
         self.bbox = ['n/a' for i in range (len(self.labels))]
         
@@ -48,16 +48,22 @@ class LBData:
     
     def load_image(self):
         # load image 
+        cur_gauge, to_gauge = 0, 0; 
+        print(f"total image : {self.get_len()} [",end='');
+        
         for i in range (self.get_len()) :
             
-            if(i % 20  == 0) :
-                print(f"loading images ... {i}/{len(self.labels)} done.")
+            to_gauge = i/self.get_len() * 30;
+            if(cur_gauge < int(to_gauge)) :
+                print("=",end='');
+                cur_gauge = int(to_gauge)
             
             response = requests.get(self.labels[i]['Labeled Data'])
             image_bytes = io.BytesIO(response.content)
 
             self.img.append(PIL.Image.open(image_bytes))
             
+        print("]");
     
     def get_image(self, idx):
         return self.img[idx];
