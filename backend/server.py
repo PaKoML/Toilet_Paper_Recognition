@@ -4,6 +4,12 @@ from werkzeug.utils import secure_filename
 import numpy as np
 import cv2
 import torch
+from torchvision import transforms
+from torchvision.transforms import ToTensor, ToPILImage
+from IPython.display import display 
+from PIL import Image, ImageDraw
+
+from pakonet_model import PaKoNet
 
 UPLOAD_FOLDER = '/path/to/the/uploads'
 ALLOWED_EXTENSIONS = {'pdf', 'png', 'jpg', 'jpeg', 'gif', 'pt'}
@@ -12,7 +18,9 @@ MEMORY_ROUTE = './memory/'
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-model = torch.load("tissue_model.pt")
+model = PaKoNet()
+model.load_state_dict(torch.load("tissue_model.pt"))
+model.eval()
 print(model)
 
 def allowed_file(filename):
@@ -20,14 +28,16 @@ def allowed_file(filename):
 
 def transform_image(in_image) :
     input_transforms = [
-        transforms.Resize(224),
+        transforms.Resize((224,224)),
         transforms.ToTensor(),
         transforms.Normalize([0.5234, 0.9585, 0.6256],[0.1797, 0.1135, 0.2118])
     ]
     my_transforms = transforms.Compose(input_transforms)
     image = Image.open(in_image)
     timg = my_transforms(image)
-    timg.unsqeeze(0)
+    print('before unsqueeze : ', np.shape(timg))
+    timg = timg.unsqueeze(dim=0)
+    print('after unsqueeze : ', np.shape(timg))
     return timg
     
 def get_prediction(input_tensor) :
@@ -55,18 +65,31 @@ def upload_file():
         
         if file and allowed_file(file.filename):
             input_tensor = transform_image(file)
+            print(np.shape(input_tensor))
             bbox, category = get_prediction(input_tensor)
+            bbox = bbox[0]
+            category = category[0]
             
             print(bbox, category)
             #file_type = type(file)
             #print(file_type, file.filename)
             #filename = secure_filename(file.filename)
-            #file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+            #file.save(os.path.join(MEMORY_ROUTE, secure_filename(file.filename)))
             
             #input_tensor = transform_image(file)
-            
-            return 'what you\'ve uploaded is kinda %s' %file.filename
+            img = transforms.ToTensor()(Image.open(file))
+            img = ToPILImage()(img.squeeze())
+            draw = ImageDraw.Draw(img)
+            print(bbox, img.size)
+            draw.rectangle((bbox[0]*img.size[0], bbox[1]*img.size[1], bbox[2]*img.size[0], bbox[3] * img.size[1]), outline=(0,255,0), width = 1)
+            img.save(os.path.join('./static/','result.jpg'))
+            flash(category[0].item());
+            return result_show();
     return 
+
+@app.route('/result')
+def result_show():
+    return render_template('result_show.html')
 
 @app.route('/')
 def index():
