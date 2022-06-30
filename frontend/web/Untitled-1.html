@@ -10,51 +10,58 @@
     
 </head>
 <body>
-
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.1"> </script>
-
     <div>
         <h1>
             PaKoML toilet tissue project
         </h1>
+
+        <h3>
+            <p>
+                과기머 고려머 학생들이 만든 굉장히 대단하고 사회에 어떠한 영향도 미치지 않을 프로젝트입니다.
+            </p>
+            <p>
+                휴지 사진을 넣으시면 아주 유용하게 해당 휴지가 over인지 under인지 확률값으로 알려줍니다.
+            </p>
+            <p>
+                알아서 뭐하냐고요? 언젠간 쓸 일이 있을지도 모르지요.
+            </p>
+        </h3>
     </div>
 
-    <div class="container">
-        <div class="image-upload" id="image-upload">
 
-            <form method="post" enctype="multipart/form-data">
-                <div class="button">
-                    <label for="chooseFile">
-                        👉 CLICK HERE! 👈
-                    </label>
-                </div>
-                <input type="file" id="chooseFile" name="chooseFile" accept="image/*" onchange="loadFile(this)">
-            </form>
-
-            <div class="fileContainer">
-                <div class="fileInput">
-                    <p>FILE NAME: </p>
-                    <p id="fileName"></p>
-                </div>
-                <div class="buttonContainer">
-                    <div class="submitButton" id="submitButton">SUBMIT</div>
-                </div>
+    <form action = "https://jordano112.run.goorm.io/uploader" method = "POST" enctype = "multipart/form-data">
+        <div style = "border: 1px dotted; padding: 10px; width: auto; height: 60px; margin: 40px;" >
+            <div class = "file-select">
+                <input type="file" name ="file" id="image" accept="image/*" onchange="setThumbnail(event);"/>
+                <div id="image_container"></div>
             </div>
         </div>
+
+
+        <div class = "file-submit">
+            <div class="botton"></div>
+            <input type = "submit"/>
+        </div>
         
-        <div class="image-show" id="image-show"></div>
-        
-        <script>
-            const img = document.getElementById('img');
-        </script>
-
-    </div>
+    </form>   
 
 
-    <script src="index.js"></script>
-
-
+    
+    <script>
+        function setThumbnail(event) {
+            var reader = new FileReader();
+    
+            reader.onload = function(event) {
+              var img = document.createElement("img");
+              img.setAttribute("src", event.target.result);
+              document.querySelector("div#image_container").appendChild(img);
+            };
+    
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    </script>
+          
 </body>
 
-
 </html>
+
