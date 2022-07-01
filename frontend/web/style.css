@@ -5,6 +5,7 @@ html {
 
 
 
+
 body {
     padding: 12px 12px 270px;
     background-color:#313131;
@@ -33,10 +34,12 @@ body {
     margin: 48px 60px 62px;
     font-family: NanumMyeongjo;
     font-size: 14px;
+
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
+
     letter-spacing: 0.17px;
     text-align: center;
     color: #fff;
@@ -90,4 +93,5 @@ input[type=submit]{
     color: #fff; 
     
 }
+
 
