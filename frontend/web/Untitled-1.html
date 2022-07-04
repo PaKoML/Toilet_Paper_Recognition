@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>PaKoML toilet tissue project</title>
+    <title>PaKoML Toilet Tissue Project</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100');
+        </style>
     
 </head>
 <body>
@@ -15,38 +18,30 @@
     
     <div>
         <span class="title">
-            <h1> PaKoML toilet tissue project</h1>
+            <h1> PaKoML Toilet Tissue Project</h1>
         </span>
 
-        <span class="mention">
-            서령고등학교 홍지환 군이 육군사관학교 일반전형으로 최종 합격
-          했다.
-          
-          홍 군은 학교장 추천으로 지원, 1차 필기시험, 2차 신체검사, 면접
-          시험, 체력검정 등 관문을 통과하여 총 모집인원에서 60%를 선발
-          하는 `우선 선발`에 선정됐다.
-          
-          구재모 담임교사는 "극심한 취업난 속에 34.2대 1이라는 치열한 경
-          쟁률을 뚫고 육사에 합격한 것은 서령고의 큰 자랑거리"라고 설명
-          했다.
-          </span>
+        <div class="mention">
+            There have been many controversies over the direction of toilet paper when it is hung on. Although some very early patent implies that the over direction is right[1], even today, many tissues all around the world are being hung in various directions ― even sometimes it hung on vertically. So, we developers decided to make a fully automatic program based on convolutional neural net work to detect the direction the tissue in the picture is hung. And some convenient UI that helps users to upload the pictures that may contain toilet tissues so that this program can detect on. And here is what we made.
+        </div>
     </div>
 
 
     
         <div class = "border">
-            <div class = "file-select">
-                <input type="file" value= "파일선택" name ="file" id="image" accept="image/*" onchange="setThumbnail(event);" onclick="togglefileselcet()"/>
-                <div id="image_container">
-                </div>
-                
-            </div>
+            <div class = "image-select">
+                <label for="image upload">Choose image</label>
+                <input type="file" value="image upload" name ="image upload" id="image upload" accept="image/*" onchange="setThumbnail(event);" onclick="togglefileselcet()"/>
+            </div>    
+                <div id="image_container"></div>
+            
         </div>
 
 
         <div class = "file-submit">
             <div class="botton">
-                <input type = "submit"/>
+                <input type = "submit" value="submit"/>
+
             </div>
             
         </div>
@@ -67,7 +62,15 @@
             reader.readAsDataURL(event.target.files[0]);
         }
     </script>
-    <
+
+
+    <script>
+    var input = document.querySelector('input');
+    var preview = document.querySelector('.preview');
+
+    input.style.opacity = 0;
+    </script>
+
     <script>
      
         function togglefileselcet(){
