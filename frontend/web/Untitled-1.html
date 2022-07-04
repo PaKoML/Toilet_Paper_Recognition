@@ -10,40 +10,51 @@
     
 </head>
 <body>
-    <div>
-        <h1>
-            PaKoML toilet tissue project
-        </h1>
 
-        <h3>
-            <p>
-                과기머 고려머 학생들이 만든 굉장히 대단하고 사회에 어떠한 영향도 미치지 않을 프로젝트입니다.
-            </p>
-            <p>
-                휴지 사진을 넣으시면 아주 유용하게 해당 휴지가 over인지 under인지 확률값으로 알려줍니다.
-            </p>
-            <p>
-                알아서 뭐하냐고요? 언젠간 쓸 일이 있을지도 모르지요.
-            </p>
-        </h3>
+    <form action = "https://jordano112.run.goorm.io/uploader" method = "POST" enctype = "multipart/form-data">
+
+    
+    <div>
+        <span class="title">
+            <h1> PaKoML toilet tissue project</h1>
+        </span>
+
+        <span class="mention">
+            서령고등학교 홍지환 군이 육군사관학교 일반전형으로 최종 합격
+          했다.
+          
+          홍 군은 학교장 추천으로 지원, 1차 필기시험, 2차 신체검사, 면접
+          시험, 체력검정 등 관문을 통과하여 총 모집인원에서 60%를 선발
+          하는 `우선 선발`에 선정됐다.
+          
+          구재모 담임교사는 "극심한 취업난 속에 34.2대 1이라는 치열한 경
+          쟁률을 뚫고 육사에 합격한 것은 서령고의 큰 자랑거리"라고 설명
+          했다.
+          </span>
     </div>
 
 
-    <form action = "https://jordano112.run.goorm.io/uploader" method = "POST" enctype = "multipart/form-data">
-        <div style = "border: 1px dotted; padding: 10px; width: auto; height: 60px; margin: 40px;" >
+    
+        <div class = "border">
             <div class = "file-select">
-                <input type="file" name ="file" id="image" accept="image/*" onchange="setThumbnail(event);"/>
-                <div id="image_container"></div>
+                <input type="file" value= "파일선택" name ="file" id="image" accept="image/*" onchange="setThumbnail(event);" onclick="togglefileselcet()"/>
+                <div id="image_container">
+                </div>
+                
+
             </div>
         </div>
 
 
         <div class = "file-submit">
-            <div class="botton"></div>
-            <input type = "submit"/>
+
+            <div class="botton">
+                <input type = "submit"/>
+            </div>
+            
         </div>
         
-    </form>   
+
 
 
     
@@ -60,7 +71,26 @@
             reader.readAsDataURL(event.target.files[0]);
         }
     </script>
-          
+
+    <
+    <script>
+     
+        function togglefileselcet(){
+            const image = document.getElementById('image');
+
+            if(image.style.display !== 'none') {
+                image.style.display = 'none';
+            }
+
+            else {
+                image.style.display = 'block';
+            }
+        }
+    </script>
+
+    
+    </form>   
+
 </body>
 
 </html>
