@@ -5,6 +5,7 @@ html {
 
 
 
+
 body {
     padding: 12px 12px 270px;
     background-color: #333333;
@@ -38,6 +39,7 @@ body {
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
+
     letter-spacing: 0.17px;
     color: #fff;
     justify-content: center;
@@ -117,4 +119,5 @@ input[type=submit]{
     border-radius: 5em;
     font-family: "Poppins";
 }
+
 
