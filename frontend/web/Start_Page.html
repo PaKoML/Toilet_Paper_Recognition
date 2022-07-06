@@ -19,7 +19,7 @@
     
     <div>
         <span class="title">
-            <h1> PaKoML Toilet Tissue Project</h1>
+            <h1>PaKoML<br>Toilet Tissue Project</h1>
         </span>
 
         <div class="mention">
@@ -29,49 +29,58 @@
 
 
     
-        <div class = "border">
-            <div class = "image-select">
-                <label for="image upload">Choose image</label>
-                <input type="file" value="image upload" name ="image upload" id="image upload" accept="image/*" onchange="setThumbnail(event);" onclick="togglefileselcet()"/>
-            </div>    
-                <div id="image_container"></div>
-            
-        </div>
+    <div class = "border">
+        <div class = "image-select">
+            <label for="image upload" onclick="togglefileselcet()">Choose image</label>
+            <input type="file" value="image upload" name ="image upload" id="image upload" accept="image/*" onchange="readURL(this);" onclick="togglefileselcet()"/>
+            <img id="preview" width : auto />
+        </div>    
+    </div>
 
 
-        <div class = "file-submit">
+    <div class = "file-submit">
+        <div class="botton">
+            <input type = "submit" value="submit"/>
+        </div>    
+    </div>
 
-            <div class="botton">
-                <input type = "submit" value="submit"/>
 
-            </div>
-            
-        </div>
+
+
+    <div class="link">
+        <a href="https://github.com/PaKoML/Toilet_Paper_Recognition" target="_blank">
+        <img src="C:\Users\msi\Downloads\GitHub-Mark\PNG\GitHub-Mark-Light-120px-Plus.png" alt="github" id = logo >
+        </a>
+    </div>
+
+
+
         
 
 
 
     
     <script>
-        function setThumbnail(event) {
-            var reader = new FileReader();
-    
-            reader.onload = function(event) {
-              var img = document.createElement("img");
-              img.setAttribute("src", event.target.result);
-              document.querySelector("div#image_container").appendChild(img);
-            };
-    
-            reader.readAsDataURL(event.target.files[0]);
-        }
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('preview').src = e.target.result;
+                    };
+                reader.readAsDataURL(input.files[0]);
+                } else {
+                    document.getElementById('preview').src = "";
+            }
+}
     </script>
 
 
     <script>
-    var input = document.querySelector('input');
-    var preview = document.querySelector('.preview');
 
-    input.style.opacity = 0;
+        var input = document.querySelector('input');
+        var preview = document.querySelector('.preview');
+
+        input.style.opacity = 0;
     </script>
 
     <script>
