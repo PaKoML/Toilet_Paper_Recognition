@@ -8,6 +8,7 @@ from torchvision import transforms
 from torchvision.transforms import ToTensor, ToPILImage
 from IPython.display import display 
 from PIL import Image, ImageDraw
+import json
 
 from pakonet_model import PaKoNet
 
@@ -17,6 +18,7 @@ MEMORY_ROUTE = './memory/'
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 model = PaKoNet()
 model.load_state_dict(torch.load("tissue_model.pt"))
@@ -25,6 +27,11 @@ print(model)
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+def dir_last_updated(folder):
+    return str(max(os.path.getmtime(os.path.join(root_path, f))
+                   for root_path, dirs, files in os.walk(folder)
+                   for f in files))
 
 def transform_image(in_image) :
     input_transforms = [
@@ -83,13 +90,33 @@ def upload_file():
             print(bbox, img.size)
             draw.rectangle((bbox[0]*img.size[0], bbox[1]*img.size[1], bbox[2]*img.size[0], bbox[3] * img.size[1]), outline=(0,255,0), width = 1)
             img.save(os.path.join('./static/','result.jpg'))
-            flash(category[0].item());
+            
+            category_np = np.exp(category.detach().numpy());
+            category_np /= np.sum(category_np);
+            category_list = category_np.tolist();
+            
+            score_data = {
+    			"score" : category_list,
+			}
+            with open("static/score_data.json","w", encoding='utf-8') as f:
+            	json.dump(score_data, f)
             return result_show();
     return 
 
 @app.route('/result')
 def result_show():
-    return render_template('result_show.html')
+    return render_template('result_show.html', last_updated=dir_last_updated('./static'))
+
+
+    # No caching at all for API endpoints.
+@app.after_request
+def add_header(response):
+    # response.cache_control.no_store = True
+    response.headers['Cache-Control'] = 'no-store, no-cache, must-revalidate, post-check=0, pre-check=0, max-age=0'
+    response.headers['Pragma'] = 'no-cache'
+    response.headers['Expires'] = '-1'
+    print('check');
+    return response
 
 @app.route('/')
 def index():
@@ -99,3 +126,5 @@ def index():
 if __name__ == '__main__' :
     app.secret_key = 'temp'
     app.run(host = '0.0.0.0', debug = True)
+    
+    
