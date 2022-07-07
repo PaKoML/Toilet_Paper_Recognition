@@ -1,6 +1,7 @@
 html {
     height: 100%;
     
+    
 }
 
 
@@ -10,6 +11,14 @@ body {
     background-color: #333333;
     
 
+}
+
+.container {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
 }
 
 .title {
@@ -35,10 +44,11 @@ body {
 }
 
 .mention {
-    width: 70%;
+    max-width: 960px;
     height: 30%;
     font-family: "Poppins";
     font-weight: 100;
+    font-size: medium;
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
@@ -50,8 +60,6 @@ body {
     left: 0;
     right: 0;
     margin-top: 20px;
-
-
 }
 
 
@@ -127,16 +135,15 @@ input[type=file]{
     border: 0;
 }
 
-#image_container{
-    width: min-content;
-    height: min-content;
-
-}
-
-#image_container > img{
-    object-fit: none;
-    width: auto;
-    height: auto;
+.image-select label{
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    vertical-align: middle;
+    background-color: #999999;
+    cursor: pointer;
+    height: 20px;
+    margin-left: 10px;
 
 }
 
@@ -182,21 +189,21 @@ input[type=submit]{
 
 
 
-@media(max-width : 768px ) {
+@media(max-width : 960px ) {
     
     .mention {
-    margin: auto;
-    padding: 0% 1% 0% 1%;
-    width: 80%;
-    height: 30%;
-    font-family: "Poppins";
-    font-weight: 100;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: 0.17px;
-    color: #fff;
-    justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0% 1% 0% 1%;
+        font-family: "Poppins";
+        font-weight: 100;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.17px;
+        color: #fff;
+        justify-content: center;
+        font-size: medium;
 
 
 }
@@ -214,6 +221,7 @@ input[type=submit]{
 }
 
     #logo{
+    position: absolute;
     display: block;
     width: 64px;
     height: 64px;

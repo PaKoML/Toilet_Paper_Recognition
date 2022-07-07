@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>PaKoML Toilet Tissue Project</title>
-    <link rel="stylesheet" href="style.css">
+    <title>PaKoML Toilet Paper Recognition</title>
+    <link rel="stylesheet" href="Start_style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100');
         </style>
@@ -15,11 +15,10 @@
 <body>
 
     <form action = "https://jordano112.run.goorm.io/uploader" method = "POST" enctype = "multipart/form-data">
-
-    
+    <li class="container">
     <div>
         <span class="title">
-            <h1>PaKoML<br>Toilet Tissue Project</h1>
+            <h1>PaKoML<br>Toilet Paper Recognition</h1>
         </span>
 
         <div class="mention">
@@ -28,12 +27,12 @@
     </div>
 
 
-    
+
     <div class = "border">
         <div class = "image-select">
-            <label for="image upload" onclick="togglefileselcet()">Choose image</label>
-            <input type="file" value="image upload" name ="image upload" id="image upload" accept="image/*" onchange="readURL(this);" onclick="togglefileselcet()"/>
-            <img id="preview" width : auto />
+            <label for="image upload" width="auto" height="auto">Choose image</label>
+            <input type="file" value="image upload" name ="file" id="image upload" accept="image/*" onchange="readURL(this);"/>
+                <img id="preview" />
         </div>    
     </div>
 
@@ -49,7 +48,7 @@
 
     <div class="link">
         <a href="https://github.com/PaKoML/Toilet_Paper_Recognition" target="_blank">
-        <img src="C:\Users\msi\Downloads\GitHub-Mark\PNG\GitHub-Mark-Light-120px-Plus.png" alt="github" id = logo >
+        <img src="GitHub-Mark-Light-120px-plus.png" alt="github" id = logo >
         </a>
     </div>
 
@@ -98,7 +97,7 @@
         }
     </script>
 
-    
+</li>
     </form>   
 
 </body>
