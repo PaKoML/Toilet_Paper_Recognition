@@ -8,6 +8,7 @@ from torchvision import transforms
 from torchvision.transforms import ToTensor, ToPILImage
 from IPython.display import display 
 from PIL import Image, ImageDraw
+import json
 
 from pakonet_model import PaKoNet
 
@@ -89,7 +90,16 @@ def upload_file():
             print(bbox, img.size)
             draw.rectangle((bbox[0]*img.size[0], bbox[1]*img.size[1], bbox[2]*img.size[0], bbox[3] * img.size[1]), outline=(0,255,0), width = 1)
             img.save(os.path.join('./static/','result.jpg'))
-            flash(category[0].item());
+            
+            category_np = np.exp(category.detach().numpy());
+            category_np /= np.sum(category_np);
+            category_list = category_np.tolist();
+            
+            score_data = {
+    			"score" : category_list,
+			}
+            with open("static/score_data.json","w", encoding='utf-8') as f:
+            	json.dump(score_data, f)
             return result_show();
     return 
 

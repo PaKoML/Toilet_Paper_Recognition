@@ -1,21 +1,75 @@
 <html>
     <head>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/result_style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/result_style.css') }}" />
+        <script src="{{ url_for('static', filename='js/result_show.js') }}"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins');
+        </style>
     </head>
     <body>
-        <div class="title">
-            <h1>
+        <li class="container">
+            <div class="title">
                 Result page
-            </h1>
+            </div>
+            
+    
+            <div class="result_photo" style="text-align: center;">
+                <img src = "../static/result.jpg">
+            </div>
+            
+            <div class="result_value">
+    
+            </div>
+            <div class="result_value">
+            <section class="bar-graph bar-graph-horizontal bar-graph-one">
+                <div class="bar-one">
+                    <span class="year">over</span>
+                    <div class="bar" data-percentage=""></div>
+                </div>
+                <div class="bar-two">
+                    <span class="year">under</span>
+                    <div class="bar" data-percentage=""></div>
+                </div>
+                <div class="bar-three">
+                    <span class="year">vertical or unspecified</span>
+                    <div class="bar" data-percentage=""></div>
+                </div>
+            </section>
         </div>
+        </li>
+
         
 
-        <div class="result_photo" style="text-align: center;">
-            <img src = "../static/result.jpg">
-        </div>
-        
-        <div class="result_value">
+        <script>
+            var result_value = document.createElement('div');
+            fetch('../static/score_data.json')
+                .then((response) => {
+                    return response.json();
+                })
+                .then((jsondata) => {
+                    var cnt;
+                    var score = new Array();
+                    for (cnt = 0; cnt < 3; cnt++) {
+                        score[cnt] = Math.round(jsondata['score'][cnt] * 100).toString() + '%';
+                    }
 
-        </div>
+                    document
+                        .getElementsByClassName('bar-one')[0]
+                        .getElementsByClassName('bar')[0]
+                        .setAttribute('data-percentage', score[1]);
+                    document
+                        .getElementsByClassName('bar-two')[0]
+                        .getElementsByClassName('bar')[0]
+                        .setAttribute('data-percentage', score[2]);
+                    document
+                        .getElementsByClassName('bar-three')[0]
+                        .getElementsByClassName('bar')[0]
+                        .setAttribute('data-percentage', score[0]);
+
+                    document.querySelector('.bar-one').style.setProperty('--score1', score[1]);
+                    document.querySelector('.bar-two').style.setProperty('--score2', score[2]);
+                    document.querySelector('.bar-three').style.setProperty('--score0', score[0]);
+                });
+        </script>
     </body>
 </html>
