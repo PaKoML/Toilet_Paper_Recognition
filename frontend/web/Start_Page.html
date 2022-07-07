@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PaKoML Toilet Paper Recognition</title>
+    <link rel="stylesheet" href="Start_style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+        </style>
+    
+</head>
+<body>
+
+    <form action = "https://jordano112.run.goorm.io/uploader" method = "POST" enctype = "multipart/form-data">
+    <li class="container">
+    <div>
+        <span class="title">
+            <h1>PaKoML<br>Toilet Paper Recognition</h1>
+        </span>
+
+        <div class="mention">
+            There have been many controversies over the direction of toilet paper when it is hung on. Although some very early patent implies that the over direction is right, even today, many tissues all around the world are being hung in various directions ― even sometimes it hung on vertically. 
+            So, we developers decided to make a fully automatic program based on convolutional neural net work to detect the direction the tissue in the picture is hung. 
+            And some convenient UI that helps users to upload the pictures that may contain toilet tissues so that this program can detect on. And here is what we made.
+        </div>
+    </div>
+
+
+
+    <div class = "border">
+        <div class = "image-select">
+            <label for="image upload" width="auto" height="auto">choose image</label>
+            <input type="file" value="image upload" name ="file" id="image upload" accept="image/*" onchange="readURL(this);"/>
+                <img id="preview" />
+        </div>    
+    </div>
+
+
+    <div class = "file-submit">
+        <div class="botton">
+            <input type = "submit" value="submit"/>
+        </div>    
+    </div>
+
+
+
+
+    <div class="link">
+        <a href="https://github.com/PaKoML/Toilet_Paper_Recognition" target="_blank">
+        <img src="GitHub-Mark-Light-120px-plus.png" alt="github" id = logo >
+        </a>
+    </div>
+
+
+
+        
+
+
+
+    
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('preview').src = e.target.result;
+                    };
+                reader.readAsDataURL(input.files[0]);
+                } else {
+                    document.getElementById('preview').src = "";
+            }
+}
+    </script>
+
+
+    <script>
+
+        var input = document.querySelector('input');
+        var preview = document.querySelector('.preview');
+
+        input.style.opacity = 0;
+    </script>
+
+    <script>
+     
+        function togglefileselcet(){
+            const image = document.getElementById('image');
+
+            if(image.style.display !== 'none') {
+                image.style.display = 'none';
+            }
+
+            else {
+                image.style.display = 'block';
+            }
+        }
+    </script>
+
+</li>
+    </form>   
+
+</body>
+
+</html>
+

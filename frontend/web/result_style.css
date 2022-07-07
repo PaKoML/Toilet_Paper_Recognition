@@ -1,0 +1,42 @@
+body {
+    padding: 12px 12px 270px;
+    background-color:#333333;
+
+}
+
+.container {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+li{
+    list-style:none;
+    }
+
+.title {
+    width: 304px;
+    height: 53px;
+    margin: auto;
+    font-size: 48px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fca311;
+    justify-content: center;
+    font-family: "Poppins";   
+}
+
+
+.result_photo{
+    margin: 5%;
+}
+
+.result_photo > img{
+    width: 100%;
+    object-fit: scale-down;
+}
