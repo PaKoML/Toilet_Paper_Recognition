@@ -4,24 +4,36 @@ body {
 
 }
 
+.container {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+li{
+    list-style:none;
+    }
+
 .title {
     width: 304px;
     height: 53px;
     margin: auto;
-    font-family: SegoeUI;
-    font-size: auto;
-    font-weight: bold;
+    font-size: 48px;
     font-stretch: normal;
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
     text-align: center;
-    color: #e5e5e5;
+    color: #fca311;
     justify-content: center;
+    font-family: "Poppins";   
 }
 
+
 .result_photo{
-    margin: 20%;
+    margin: 5%;
 }
 
 .result_photo > img{
