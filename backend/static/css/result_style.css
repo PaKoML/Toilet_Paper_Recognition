@@ -1,0 +1,30 @@
+body {
+    padding: 12px 12px 270px;
+    background-color:#333333;
+
+}
+
+.title {
+    width: 304px;
+    height: 53px;
+    margin: auto;
+    font-family: SegoeUI;
+    font-size: auto;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #e5e5e5;
+    justify-content: center;
+}
+
+.result_photo{
+    margin: 20%;
+}
+
+.result_photo > img{
+    width: 100%;
+    object-fit: scale-down;
+}

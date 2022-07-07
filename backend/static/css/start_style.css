@@ -1,0 +1,231 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #333333;
+}
+
+li{
+    list-style:none;
+    }
+
+.container {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+.title {
+    width: 304px;
+    height: 20px;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-family: "Poppins";
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fca311;
+    justify-content: center;
+    font-family: "Poppins";   
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+
+}
+
+.mention {
+    max-width: 960px;
+    height: 30%;
+    font-family: "Poppins";
+    font-weight: 100;
+    font-size: medium;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.17px;
+    color: #fff;
+    text-align: center; 
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    margin-top: 20px;
+}
+
+
+.border  {
+    justify-content: center;
+    padding: 0% 0% 0% 0%;
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: solid 1px #707070; */
+    /* border-style: dashed; */
+    /* border-width: 2px; */
+    border: auto;
+    background-color: #fff;
+    left: 0;
+    right: 0;
+    
+  }
+
+.image-select {
+    justify-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    vertical-align: middle;
+}
+
+input[type=file]{
+    width: 70px;
+    height: 27px;
+    font-size: auto;
+    background-color: #fca311;
+    border-style: none; 
+    color: #fff; 
+    font-weight: bold;
+    font-style: normal;
+    border-radius: 5em;
+    font-family: "Poppins";   
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    vertical-align: middle;
+}
+
+.image-select label {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    vertical-align: middle;
+    background-color: #999999;
+    cursor: pointer;
+    height: 40px;
+    margin-left: 10px;
+}
+
+#preview{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.image-select input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+
+.image-select label{
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    vertical-align: middle;
+    background-color: #999999;
+    cursor: pointer;
+    height: 20px;
+    margin-left: 10px;
+
+}
+
+.botton  {
+    float: right;
+    display: flex;
+    width: auto;
+    height: auto;
+    background-color: #fca311;
+    border: 3%;
+    border-radius: 3em;
+    
+  }
+
+input[type=submit]{
+    width: 80px;
+    height: 27px;
+    font-size: auto;
+    background-color: #fca311;
+    border-style: none; 
+    color: #fff; 
+    font-weight: bold;
+    font-style: normal;
+    border-radius: 5em;
+    font-family: "Poppins";
+    letter-spacing: 0.1em;
+}
+
+
+
+#logo{
+    position: absolute;
+    display: block;
+    width: 64px;
+    height: 64px;
+    object-fit: scale-down;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+
+}
+
+
+
+@media(max-width : 960px ) {
+    
+    .mention {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0% 1% 0% 1%;
+        font-family: "Poppins";
+        font-weight: 100;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 0.17px;
+        color: #fff;
+        justify-content: center;
+        font-size: medium;
+
+
+}
+    input[type=submit]{
+        width: 70px;
+        height: 27px;
+        font-size: auto;
+        background-color: #fca311;
+        border-style: none; 
+        color: #fff; 
+        font-weight: bold;
+        font-style: normal;
+        border-radius: 5em;
+        font-family: "Poppins";
+}
+
+    #logo{
+    position: absolute;
+    display: block;
+    width: 64px;
+    height: 64px;
+    object-fit: scale-down;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+}
