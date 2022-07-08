@@ -1,45 +1,49 @@
 <html>
     <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
         <link rel="stylesheet" href="{{ url_for('static', filename='css/result_style.css') }}" />
         <script src="{{ url_for('static', filename='js/result_show.js') }}"></script>
         <style>
-            @import url('https://fonts.googleapis.com/css2?family=Poppins');
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
         </style>
     </head>
     <body>
-        <li class="container">
-            <div class="title">
-                Result page
-            </div>
-            
-    
-            <div class="result_photo" style="text-align: center;">
-                <img src = "../static/result.jpg">
-            </div>
-            
-            <div class="result_value">
-    
-            </div>
-            <div class="result_value">
-            <section class="bar-graph bar-graph-horizontal bar-graph-one">
-                <div class="bar-one">
-                    <span class="year">over</span>
-                    <div class="bar" data-percentage=""></div>
-                </div>
-                <div class="bar-two">
-                    <span class="year">under</span>
-                    <div class="bar" data-percentage=""></div>
-                </div>
-                <div class="bar-three">
-                    <span class="year">vertical or unspecified</span>
-                    <div class="bar" data-percentage=""></div>
-                </div>
-            </section>
-        </div>
-        </li>
-
         
+        <div class="container">
+            
+            <div class = "empty" style = " height : 20px"></div>
+            
+            <div class="title">
+                <h1>Result page</h1>
+            </div>
 
+            <div class="result_photo" style="text-align: center;">
+                <img src="../static/result.jpg" />
+            </div>
+
+            <div class="result_value">
+                <section class="bar-graph bar-graph-horizontal bar-graph-one">
+                    <div class="bar-one">
+                        <span class="category">over</span>
+                        <div class="bar" data-percentage=""></div>
+                    </div>
+                    <div class="bar-two">
+                        <span class="category">under</span>
+                        <div class="bar" data-percentage=""></div>
+                    </div>
+                    <div class="bar-three">
+                        <span class="category">etc</span>
+                        <div class="bar" data-percentage=""></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+        <div class = "empty" style = " height : 300px"></div>
+        
         <script>
             var result_value = document.createElement('div');
             fetch('../static/score_data.json')
@@ -71,5 +75,6 @@
                     document.querySelector('.bar-three').style.setProperty('--score0', score[0]);
                 });
         </script>
+        
     </body>
 </html>

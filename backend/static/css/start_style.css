@@ -6,9 +6,9 @@ body {
     background-color: #333333;
 }
 
-li{
-    list-style:none;
-    }
+li {
+    list-style: none;
+}
 
 .container {
     max-width: 960px;
@@ -18,12 +18,33 @@ li{
     right: 0;
 }
 
+.logo {
+    filter: invert(71%) sepia(18%) saturate(2484%) hue-rotate(348deg) brightness(98%) contrast(102%);
+    float: center;
+    width: 70px;
+    height: 70px;
+    padding:0px;
+    margin:0px;
+    font-size:0px;
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+    .logo {
+        width: 150px;
+        height: 150px;
+        display : block;
+        margin-left: auto;
+        margin-right : auto;
+    }
+}
+
 .title {
     width: 304px;
     height: 20px;
     margin-bottom: 25px;
     font-size: 24px;
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-weight: bold;
     font-stretch: normal;
     font-style: normal;
@@ -31,18 +52,17 @@ li{
     letter-spacing: normal;
     text-align: center;
     color: #fca311;
-    justify-content: center;  
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
-
 }
 
 .mention {
     max-width: 960px;
     height: 30%;
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-weight: normal;
     font-size: medium;
     font-stretch: normal;
@@ -50,7 +70,7 @@ li{
     line-height: normal;
     letter-spacing: 0.17px;
     color: #fff;
-    text-align: center; 
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
     left: 0;
@@ -58,8 +78,7 @@ li{
     margin-top: 20px;
 }
 
-
-.border  {
+.border {
     justify-content: center;
     padding: 0% 0% 0% 0%;
     width: 100%;
@@ -75,8 +94,7 @@ li{
     background-color: #fff;
     left: 0;
     right: 0;
-    
-  }
+}
 
 .image-select {
     justify-content: center;
@@ -88,17 +106,17 @@ li{
     vertical-align: middle;
 }
 
-input[type=file]{
+input[type='file'] {
     width: 70px;
     height: 27px;
     font-size: auto;
     background-color: #fca311;
-    border-style: none; 
-    color: #fff; 
+    border-style: none;
+    color: #fff;
     font-weight: bold;
     font-style: normal;
     border-radius: 5em;
-    font-family: "Poppins";   
+    font-family: 'Poppins';
     margin-left: auto;
     margin-right: auto;
     left: 0;
@@ -117,12 +135,12 @@ input[type=file]{
     margin-left: 10px;
 }
 
-#preview{
+#preview {
     max-width: 100%;
     max-height: 100%;
 }
 
-.image-select input[type="file"] {
+.image-select input[type='file'] {
     position: absolute;
     width: 0;
     height: 0;
@@ -131,7 +149,7 @@ input[type=file]{
     border: 0;
 }
 
-.image-select label{
+.image-select label {
     display: inline-block;
     padding: 10px 20px;
     color: #fff;
@@ -140,10 +158,9 @@ input[type=file]{
     cursor: pointer;
     height: 20px;
     margin-left: 10px;
-
 }
 
-.botton  {
+.botton {
     float: right;
     display: flex;
     width: auto;
@@ -151,29 +168,26 @@ input[type=file]{
     background-color: #fca311;
     border: 3%;
     border-radius: 3em;
-    
-  }
+}
 
-input[type=submit]{
+input[type='submit'] {
     width: 100px;
     height: 35px;
     font-size: auto;
     background-color: #fca311;
-    border-style: none; 
-    color: #fff; 
+    border-style: none;
+    color: #fff;
     font-weight: bold;
     font-style: normal;
     border-radius: 5em;
-    font-family: "Poppins";
+    font-family: 'Poppins';
     letter-spacing: 0.1em;
 }
 
-
-
-#logo{
+#logo {
     position: absolute;
     display: block;
-    margin-top: 18%;
+    margin-top: 13%;
     width: 48px;
     height: 48px;
     object-fit: scale-down;
@@ -181,18 +195,14 @@ input[type=submit]{
     margin-right: auto;
     left: 0;
     right: 0;
-
 }
 
-
-
-@media(max-width : 960px ) {
-    
+@media (max-width: 960px) {
     .mention {
         margin-left: auto;
         margin-right: auto;
         padding: 0% 1% 0% 1%;
-        font-family: "Poppins";
+        font-family: 'Poppins';
         font-stretch: normal;
         font-style: normal;
         line-height: normal;
@@ -201,34 +211,31 @@ input[type=submit]{
         justify-content: center;
         font-size: medium;
         font-weight: normal;
+    }
 
+    #logo {
+        position: absolute;
+        display: block;
+        width: 32px;
+        height: 32px;
+        object-fit: scale-down;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+    }
 
-}
-
-
-    #logo{
-    position: absolute;
-    display: block;
-    width: 32px;
-    height: 32px;
-    object-fit: scale-down;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-}
-
-    input[type=submit]{
-    width: 80px;
-    height: 27px;
-    font-size: auto;
-    background-color: #fca311;
-    border-style: none; 
-    color: #fff; 
-    font-weight: bold;
-    font-style: normal;
-    border-radius: 5em;
-    font-family: "Poppins";
-    letter-spacing: 0.1em;
-}
+    input[type='submit'] {
+        width: 80px;
+        height: 27px;
+        font-size: auto;
+        background-color: #fca311;
+        border-style: none;
+        color: #fff;
+        font-weight: bold;
+        font-style: normal;
+        border-radius: 5em;
+        font-family: 'Poppins';
+        letter-spacing: 0.1em;
+    }
 }
