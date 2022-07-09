@@ -8,7 +8,7 @@
 
 <div align = "center"> 
   
-![license](https://img.shields.io/github/license/osamhack2021/PaKoML/Toilet_Paper_Recognition.svg)
+![license](https://img.shields.io/github/license/PaKoML/Toilet_Paper_Recognition.svg)
 ![repo size in bytes](https://img.shields.io/github/repo-size/PaKoML/Toilet_Paper_Recognition.svg)
 ![GitHub contributors](https://img.shields.io/github/contributors/PaKoML/Toilet_Paper_Recognition.svg)
 ![GitHub commit](https://img.shields.io/github/last-commit/PaKoML/Toilet_Paper_Recognition.svg)
@@ -17,7 +17,7 @@
 
 ## Introduction
 <p>
-We are sometimes very confused with which orientation is appropriate for a roll of tissue when it is hung on a hanger. The initial patent of the toilet-roll dispenser[1] and Covid-19 recommendations advise to hang tissues in over direction, while opposition has been raised that hanging in the under direction can prevent the ruin of unrolling all toilet papers from cats, toddlers, and vibration.[2]
+We are sometimes very confused with which orientation is appropriate for a roll of tissue when it is hung on a hanger. The initial patent of the toilet-roll dispenser<a href = "tag_one">[1]</a> and Covid-19 recommendations advise to hang tissues in over direction, while opposition has been raised that hanging in the under direction can prevent the ruin of unrolling all toilet papers from cats, toddlers, and vibration.[2]
 
 Whoever supports either side, changing all the tissues in the world to the direction they support has become a practical dogma. However, 42 million tons of toilet papers are consumed every year[3], and the whole usage of tissues is expected to increase steadily in the future.[4] Therefore, it is expected that astronomical costs will be spent on searching for and modifying all the toilet paper rolls. Even if a place where they are likely to be hung is monitored using CCTV, it is obvious that a bottleneck occurs if manpower is involved in the toilet paper recognition process.
 
@@ -59,7 +59,7 @@ You can see loss log below, and accuarcy is not noted because we validated our l
 
 
 ### References
-[1] Mitchell, Kathy; Sugar, Marcy (19 April 2005a), "Annie's Mailbox: Friend's abuse should be reported" (PDF), Vernon Daily Record, p. 6, retrieved 3 July 2010[permanent dead link]
+<div id = "tag_one"></div>[1] Mitchell, Kathy; Sugar, Marcy (19 April 2005a), "Annie's Mailbox: Friend's abuse should be reported" (PDF), Vernon Daily Record, p. 6, retrieved 3 July 2010[permanent dead link]
 
 [2] Nerbas, Reena (4 October 2009), "Pesky glue: Peanut butter to the rescue", Winnipeg Free Press, p. D2, Factiva WFP0000020091004e5a40000h
 
