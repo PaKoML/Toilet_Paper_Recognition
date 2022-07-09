@@ -2,9 +2,13 @@
 
 # PaKoML Toilet Paper Recognition Project
 
+
+
 <p align = "center">
 <img src = "https://user-images.githubusercontent.com/19871043/177982170-974040ea-9c6a-4a7c-ad6a-3b2947577a38.png" width="150px" height="150px">
 </p>
+
+
 
 <div align = "center"> 
   
@@ -13,6 +17,11 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/PaKoML/Toilet_Paper_Recognition.svg)
 ![GitHub commit](https://img.shields.io/github/last-commit/PaKoML/Toilet_Paper_Recognition.svg)
 ![GitHub commit interval](https://img.shields.io/github/commit-activity/w/PaKoML/Toilet_Paper_Recognition.svg)
+</div>
+
+<div align = "center">
+
+The preview model is available <a href = "https://jordano112.run.goorm.io/">here</a>.
 </div>
 
 ## Introduction
@@ -35,7 +44,11 @@ Therefore, judging where and how toilet papers are hung within a given image has
 
 ## How To Use
 
-The preview model is available <a href = "https://jordano112.run.goorm.io/">here</a>.
+```
+git pull origin https://github.com/PaKoML/Toilet_Paper_Recognition/
+python3 backend/server.py
+```
+
 <h4>1. Click "choose image"<h4>
 <p align = "center">
 <img src = https://user-images.githubusercontent.com/62343298/178099513-afe4e39f-f847-41e7-8ce2-f10e554bfba7.jpg width="500px")
