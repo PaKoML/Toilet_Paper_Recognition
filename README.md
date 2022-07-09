@@ -30,12 +30,29 @@ Therefore, judging where and how toilet papers are hung within a given image has
 The preview model is available <a href = "https://jordano112.run.goorm.io/">here</a>.
 
 
-## Model
-VGGNet(VGG16) is used for feature extraction from image, then feature vector is computed in two submodel : category classifier and bounding box regressor. 
+## Model overview
+VGGNet(VGG16)[5] is used for feature extraction from image, then feature vector is computed in two submodel : category classifier and bounding box regressor. 
 
 <p align = "center">
-<img src = "https://user-images.githubusercontent.com/19871043/177984627-b1ef4c78-915b-4abf-9212-3a58348ee8b7.png" width="700px">
+<img src = "https://user-images.githubusercontent.com/19871043/177984627-b1ef4c78-915b-4abf-9212-3a58348ee8b7.png" width="500px">
 </p>
+(image from https://neurohive.io/en/popular-networks/vgg16/)
+<br><br>
+Instead of using full VGG16 model, we changed fully-connected layer part to two predictor. The details are shown in below.
+
+<p align = "center">
+<img src = "https://user-images.githubusercontent.com/19871043/178096409-dbd26b40-aba0-416d-b690-247f8a222388.png" width="500px">
+</p>
+
+### Datasets
+We trained our model on 580 images of toilet paper dispensor picture annotated with a bounding box manually drawn by us. The data is consists of 264 over pictures, 195 vertical or unspecified pictures, and 41 under pictures. To draw bounding box and load data, <a href = "https://app.labelbox.com/">labelbox</a> is used.
+
+### Details of our learning
+We trained our model using Adams with learning rate = 3e-5, batch size = 5, no learning decay scheduling, and 40 Epochs. For loss function, MSELoss is used and the loses from bounding box regressor and category classifier is added after multipling 10 to the loss of category classifier to get a balance between them.
+
+You can see loss log below, and accuarcy is not noted because we validated our learning by just watching how our model draws bounding box and predicts class on unseen data. 
+
+![image](https://user-images.githubusercontent.com/19871043/178096753-dbf8092d-546c-43fa-ab0a-ddbb47605307.png)
 
 
 
@@ -49,6 +66,8 @@ VGGNet(VGG16) is used for feature extraction from image, then feature vector is 
 [3] Statistica. (n.d.). Retrieved July 1, 2022, from https://www.statista.com/outlook/cmo/tissue-hygiene-paper/toilet-paper/worldwide
 
 [4] Fortune Business Insights. (n.d.). Retrieved July 1, 2022, from https://www.fortunebusinessinsights.com/toilet-paper-market-104298
+
+[5] Simonyan, K., & Zisserman, A. (2014). Very deep convolutional networks for large-scale image recognition. arXiv preprint arXiv:1409.1556.
 
 
 
