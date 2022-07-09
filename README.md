@@ -24,6 +24,14 @@ Whoever supports either side, changing all the tissues in the world to the direc
 Therefore, judging where and how toilet papers are hung within a given image has become a global challenge. The PaKoML Toilet Paper Recognition Machine transform this recognition into a full-automatic process and opens a new horizon for the discourse of toilet paper orientation.
 </p>
 
+<details>
+    <summary>korean version introduction</summary>
+    <p><br>&nbsp;&nbsp;우리가 때때로 대단히 혼란스럽게 느끼는 것은, 두루마리 휴지가 휴지걸이에 걸려있을 때 어느 방향으로 풀려있는 것이 적절한가 하는 점이다. 휴지걸이의 초기 특허와 관련된 증거들과<a href = "#tag_one">[1]</a> covid-19 권고사항들은 over 방향을 권고하는 경우가 있는가 하면, under 방향으로 걸어놓은 경우 고양이와 어린 아이들, 진동으로부터 휴지가 몽땅 풀리는 참상을 막을 수 있다는 반대 의견이 제기된 바 있다.<a href = "#tag_two">[2]</a>
+      
+  &nbsp;&nbsp;어느 쪽을 지지하는 사람이건, 세상에 걸려있는 모든 휴지를 자신이 지지하는 방향으로 바꾸어 걸어놓는 것은 하나의 실천적 도그마가 되었다. 하지만 매 해 4200만 톤의 휴지가 사용되고<a href = "#tag_three">[3]</a> 앞으로도 휴지 사용량이 꾸준히 증가할 것으로 예상되는 실정이다.<a href = "#tag_four">[4]</a> 따라서 휴지가 걸려있는 모든 장소를 찾아다니며 그를 수정하는 것은 천문학적인 사회적 비용이 소모될 것으로 예측된다. CCTV를 이용하여 휴지가 걸려있을 법한 장소를 모니터링하더라도, 인력이 휴지 인식 과정(toilet paper recognition process)에 수반되는 순간 병목 현상이 유발됨은 자명하다.
+      
+  &nbsp;&nbsp;따라서 주어진 이미지 안에서 휴지가 어디에 어떻게 걸려있는가를 판단하는 것은 전인류적 숙제가 되었다. PaKoML Toilet Paper Recognition Machine은 이러한 인식 과정을 완전한 자동화 과정으로 탈피시키고, 두루마리 휴지 방향(toilet paper direction) 담론에 새로운 지평을 연다.</p>
+</details>
 
 ## How To Use
 
