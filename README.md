@@ -49,6 +49,8 @@ git pull origin https://github.com/PaKoML/Toilet_Paper_Recognition/
 python3 backend/server.py
 ```
 
+And download model parameter file from <a href = "https://drive.google.com/file/d/1glyqAIHGMx51Q88eCn2QNMUS9UvIMBm_/view?usp=sharing">here</a> then put the pt file into the backend directory.
+
 <h4>1. Click "choose image"<h4>
 <p align = "center">
 <img src = https://user-images.githubusercontent.com/62343298/178099513-afe4e39f-f847-41e7-8ce2-f10e554bfba7.jpg width="500px")
