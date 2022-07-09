@@ -36,8 +36,26 @@ Therefore, judging where and how toilet papers are hung within a given image has
 ## How To Use
 
 The preview model is available <a href = "https://jordano112.run.goorm.io/">here</a>.
+<h4>1. Click "choose image"<h4>
+<p align = "center">
+<img width="949" alt="IMG_0234" src="https://user-images.githubusercontent.com/62343298/178098915-5941ba94-750d-4ce2-be48-423b45a02976.PNG">
+</p>
+  
+<h4>2. Select a picture and click "Open"<h4>
+<p align = "center">
+<img width="959" alt="IMG_0235" src="https://user-images.githubusercontent.com/62343298/178098916-dd2b3556-52ea-4483-bb4a-9cbf921e28e0.PNG">
+</p>
+    
+<h4>3. Click "Submit"<h4>
+<p align = "center">
+<img width="953" alt="IMG_0236" src="https://user-images.githubusercontent.com/62343298/178098917-d93fbb13-40b0-4985-b227-bacd0941f655.PNG">  
+</p>
 
-
+<h4>4. Check the result<h4>
+<p align = "center">
+<img width="951" alt="화면 캡처 2022-07-09 164915" src="https://user-images.githubusercontent.com/62343298/178099011-da8837eb-1fed-4b9f-b5f6-bf233c38b6ae.png">
+  </p>
+  
 ## Model overview
 VGGNet(VGG16)<a href = "#tag_four">[5]</a> is used for feature extraction from image, then feature vector is computed in two submodel : category classifier and bounding box regressor. 
 
