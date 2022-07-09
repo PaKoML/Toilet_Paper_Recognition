@@ -17,9 +17,9 @@
 
 ## Introduction
 <p>
-We are sometimes very confused with which orientation is appropriate for a roll of tissue when it is hung on a hanger. The initial patent of the toilet-roll dispenser<a href = "tag_one">[1]</a> and Covid-19 recommendations advise to hang tissues in over direction, while opposition has been raised that hanging in the under direction can prevent the ruin of unrolling all toilet papers from cats, toddlers, and vibration.[2]
+We are sometimes very confused with which orientation is appropriate for a roll of tissue when it is hung on a hanger. The initial patent of the toilet-roll dispenser<a href = "#tag_one">[1]</a> and Covid-19 recommendations advise to hang tissues in over direction, while opposition has been raised that hanging in the under direction can prevent the ruin of unrolling all toilet papers from cats, toddlers, and vibration.<a href = "#tag_two">[2]</a>
 
-Whoever supports either side, changing all the tissues in the world to the direction they support has become a practical dogma. However, 42 million tons of toilet papers are consumed every year[3], and the whole usage of tissues is expected to increase steadily in the future.[4] Therefore, it is expected that astronomical costs will be spent on searching for and modifying all the toilet paper rolls. Even if a place where they are likely to be hung is monitored using CCTV, it is obvious that a bottleneck occurs if manpower is involved in the toilet paper recognition process.
+Whoever supports either side, changing all the tissues in the world to the direction they support has become a practical dogma. However, 42 million tons of toilet papers are consumed every year<a href = "#tag_three">[3]</a>, and the whole usage of tissues is expected to increase steadily in the future.<a href = "#tag_four">[4]</a> Therefore, it is expected that astronomical costs will be spent on searching for and modifying all the toilet paper rolls. Even if a place where they are likely to be hung is monitored using CCTV, it is obvious that a bottleneck occurs if manpower is involved in the toilet paper recognition process.
 
 Therefore, judging where and how toilet papers are hung within a given image has become a global challenge. The PaKoML Toilet Paper Recognition Machine transform this recognition into a full-automatic process and opens a new horizon for the discourse of toilet paper orientation.
 </p>
@@ -29,10 +29,9 @@ Therefore, judging where and how toilet papers are hung within a given image has
 
 The preview model is available <a href = "https://jordano112.run.goorm.io/">here</a>.
 
-Click on the "choose image" button
 
 ## Model overview
-VGGNet(VGG16)[5] is used for feature extraction from image, then feature vector is computed in two submodel : category classifier and bounding box regressor. 
+VGGNet(VGG16)<a href = "#tag_four">[5]</a> is used for feature extraction from image, then feature vector is computed in two submodel : category classifier and bounding box regressor. 
 
 <p align = "center">
 <img src = "https://user-images.githubusercontent.com/19871043/177984627-b1ef4c78-915b-4abf-9212-3a58348ee8b7.png" width="500px">
@@ -60,14 +59,19 @@ You can see loss log below, and accuarcy is not noted because we validated our l
 
 
 ### References
-<div id = "tag_one"></div>[1] Mitchell, Kathy; Sugar, Marcy (19 April 2005a), "Annie's Mailbox: Friend's abuse should be reported" (PDF), Vernon Daily Record, p. 6, retrieved 3 July 2010[permanent dead link]
-
+<div id = "tag_one"></div>
+[1] Mitchell, Kathy; Sugar, Marcy (19 April 2005a), "Annie's Mailbox: Friend's abuse should be reported" (PDF), Vernon Daily Record, p. 6, retrieved 3 July 2010[permanent dead link]
+<br><br>
+<div id = "tag_two"></div>
 [2] Nerbas, Reena (4 October 2009), "Pesky glue: Peanut butter to the rescue", Winnipeg Free Press, p. D2, Factiva WFP0000020091004e5a40000h
-
+<br><br>
+<div id = "tag_three"></div>
 [3] Statistica. (n.d.). Retrieved July 1, 2022, from https://www.statista.com/outlook/cmo/tissue-hygiene-paper/toilet-paper/worldwide
-
+<br><br>
+<div id = "tag_four"></div>
 [4] Fortune Business Insights. (n.d.). Retrieved July 1, 2022, from https://www.fortunebusinessinsights.com/toilet-paper-market-104298
-
+<br><br>
+<div id = "tag_five"></div>
 [5] Simonyan, K., & Zisserman, A. (2014). Very deep convolutional networks for large-scale image recognition. arXiv preprint arXiv:1409.1556.
 
 
