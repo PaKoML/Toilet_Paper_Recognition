@@ -120,4 +120,4 @@ You can see loss log below, and accuarcy is not noted because we validated our l
 ## Developers
 * [Minjun Kim](https://github.com/kmj0825) 
 * [Hanbin Park](https://github.com/kimchyoungman)
-* [Jihwan Hong](https://github.com/Jordano-Jackson)
+* [Jihwan Hong](https://github.com/Jordano-Jackson) 
